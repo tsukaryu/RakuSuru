@@ -4,13 +4,13 @@
   var comment = document.getElementById('txt');
   var label = document.getElementById('label');
   var display = document.getElementById('display');
-  var DB = "gorira";
+  var DB = ["gorira"];
 /*  var LIMIT = 20;
   label.innerHTML = LIMIT;
 
   var DISP = "hello, fucking world!";
   display.innerHTML = DISP;
-  */
+*/
 
   comment.addEventListener('keyup',function(){
     var remaining = this.value.length;
@@ -18,13 +18,15 @@
 
     var txt = this.value;
     console.log(txt);
-    display.innerHTML = txt;
-
-    if(txt.match("gorira")){
-    display.className='highlight'
+    /*txt内の特定語に<span></span>を追加*/
+    if(txt.match(/gorira/)){
+/*    display.className='highlight';*/
+      var txt = txt.replace("gorira","<mark>gorira</mark>");
     }else{
     display.className="";
     }
 
+    /*完成したtxtを出力*/
+    display.innerHTML = txt;
   });
 })();
