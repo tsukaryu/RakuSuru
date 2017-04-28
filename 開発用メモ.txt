@@ -1,0 +1,15 @@
+dotinstall
+#23
+var e = document.getElementById('msg(id名）');
+でツリー構造の値を持ってこれる
+
+e.style.color = 'red';で色変更
+e.className ='myStyle';
+でcssのクラスを適応できる
+これでハイライトできるんじゃね
+
+doument.body.appendChild(タグ).appendChild(テキスト)
+とすると、ツリー構造の最後に追加できる
+
+#24
+addEventListener(イベント，関数名（無名関数も可）)でイベントを紐づけ
